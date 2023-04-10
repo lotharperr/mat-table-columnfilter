@@ -4,7 +4,18 @@ mat-table-columnfilter adds Excel-like column filter to a mat-table.
 
 ![image](https://user-images.githubusercontent.com/12022499/230994564-19c84433-4b85-405c-bded-d2d2ac743757.png)
 
-# Getting started
+# Build from source
+
+
+```
+# build project `mat-table-columnfilter`
+ng build mat-table-columnfilter
+
+# Start the demo:
+ng serve demo
+```
+
+# Getting started (npm)
 
 ```
 npm install --save mat-table-columnfilter
