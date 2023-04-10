@@ -1,0 +1,14 @@
+<div [ngStyle]="{ 'position' : 'absolute', 'top.px' : headerService.top$ | async, 'left.px' : headerService.left$ | async }">
+    <div class="filter-panel" [ngStyle]="{ 'min-width' : panelWidth }" *ngIf="headerService.panelVisible$ | async">
+        <div class="search-field-wrapper">
+            <input autocomplete="off" class="search-field" matInput [(ngModel)]="textFilter"
+            (input)="textFilterChanged($event)" [placeholder]="searchPlaceholder">
+        </div>
+        <mat-selection-list class="item-list" [(ngModel)]="selectedOptions" [ngStyle]="{'max-height': panelHeight }">
+            <mat-list-option class="item" *ngFor="let option of filteredOptions" checkboxPosition="before" [value]="option">{{option}}</mat-list-option>
+          </mat-selection-list> 
+          <button class="small-mat-button" style="margin-left: 0.5rem;" mat-button (click)="applyFilter()">{{applyCaption}}</button>
+          <button class="small-mat-button" mat-button (click)="clearFilter()">{{clearCaption}}</button>
+          <button class="small-mat-button" mat-button (click)="closeFilterPanel()">{{closeCaption}}</button>
+    </div>
+</div>

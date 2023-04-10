@@ -1,0 +1,11 @@
+{
+  "name": "mat-table-columnfilter",
+  "version": "0.1.0",
+  "peerDependencies": {
+    "@angular/material": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "sideEffects": false
+}

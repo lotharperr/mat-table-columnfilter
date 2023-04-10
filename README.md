@@ -1,2 +1,4 @@
-# mat-table-columnfilter
-Excel like column filter for angular material (mat-table)
+# MatTableColumnfilter
+
+## Build and watch
+ng build mat-table-columnfilter --watch

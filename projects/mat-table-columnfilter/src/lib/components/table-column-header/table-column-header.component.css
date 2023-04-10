@@ -1,0 +1,19 @@
+
+:host {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.caption {
+    white-space:break-spaces;
+}
+
+.filter-icon {
+    display: flex;
+    align-items: stretch;
+    width: 1.5rem;
+    margin-left: 0.5rem;
+    height: 1.5rem;
+}
