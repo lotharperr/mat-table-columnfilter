@@ -5,8 +5,8 @@ import { SubscriptionHelper } from '../../helper/subscription-helper';
 import { TableHeaderService } from '../../services/table-header.service';
 
 export class ColumnFilterInstance {
-  columnName: string = "";
-  selectedOptions: Array<string> = new Array<string>();
+  columnName = "";
+  selectedOptions = new Array<string>();
 }
 
 @Component({
@@ -177,32 +177,6 @@ export class TableHeaderControllerComponent implements OnInit, OnDestroy {
     });
     result.map((row: any) => row[`show-row`] = true);
   }
-
-  /*
-  private applyFilter(value: string) {
-    this.fullTextSearch = value;
-    if (value?.length > 0) {
-      this.dataSource.filter = value.trim().toLowerCase();
-    } else {
-      this.dataSource.filter = "◬";
-    }
-  }
-*/
-  /*
-  updateFilter() {
-    this.applyFilter(this.fullTextSearch);
-  }
-  */
-
-  /*
-
-*/
-
-/*
-  clearFilter() {
-    this.filterSet.length = 0;
-  }
-*/
 
   private filterActiveChanged() {
     if (this.dataSource) {
