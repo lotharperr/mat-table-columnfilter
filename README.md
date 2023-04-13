@@ -83,7 +83,6 @@ this.controller.setDataSource(new MatTableDataSource(this.dataSource));
 
 <div class="wrapper">
   <h1>mat-table-columnfilter demo</h1>
-  <h2>attached filter header</h2>
   <mat-table-header-controller #headerController [filterEnabled]="filterEnabled"></mat-table-header-controller>
 
   <div class="filter-settings">
@@ -126,49 +125,6 @@ this.controller.setDataSource(new MatTableDataSource(this.dataSource));
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
-
-  <div class="detached-headers">
-    <div *ngIf="filterEnabled">
-      <h2>Deteached header filter:</h2>
-      <mat-table-column-header [controller]="headerController" columnName="position">Position</mat-table-column-header>
-      <mat-table-column-header [controller]="headerController" columnName="name">Name</mat-table-column-header>
-      <mat-table-column-header [controller]="headerController" columnName="weight">Weight</mat-table-column-header>
-      <mat-table-column-header [controller]="headerController" columnName="symbol">Symbol</mat-table-column-header>
-    </div>
-  </div>
-
-  <table mat-table [dataSource]="headerController.dataSource" class="mat-elevation-z8">
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef>Position</th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef>Weight</th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef>Symbol</th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-
-
 </div>
 ```
 
